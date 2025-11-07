@@ -1,0 +1,86 @@
+.btn {
+  background-color: #e25b5b;
+  color: white;
+  padding: 0 24px;           /* quitamos el padding vertical */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 32px;
+  font-family: lexend;
+  height: 70px;
+  width: 150px;
+  display: flex;             /* hacemos el botón flex */
+  justify-content: center;   /* centrado horizontal */
+  align-items: center;       /* centrado vertical */
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+
+  .btn:hover {
+    background-color: #8d2727; /* un verde más oscuro al pasar el mouse */
+    color: white;
+ 
+
+  }
+
+
+
+
+
+  body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: lexend;
+    }
+
+
+      @font-face {
+    font-family: lexend;
+    src: url(lexend.ttf);
+  }
+
+  .titulo {
+    font-size:larger;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250%;
+    background-image: url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+.contenedor {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 200px;
+  margin-top: 65%;        /* baja el contenedor 50px desde arriba */
+  gap: 30px;
+}
+
+  .background-image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250%;
+    background-image: url('fondo2.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.8;
+  }

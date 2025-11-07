@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería</title>
+  <link rel="shortcut icon" href="icon.jpg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: lexend;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; 
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    @font-face {
+      font-family: lexend;
+      src: url(lexend.ttf);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galería lulistica</h1>
+
+  <div class="galeria">
+
+
+    <img src="2.JPG" alt="Foto 2" onclick="openLightbox(this.src)">
+    <img src="3.JPG" alt="Foto 3" onclick="openLightbox(this.src)">
+
+
+    <img src="6.JPG" alt="Foto 6" onclick="openLightbox(this.src)">
+
+    <img src="8.jpg" alt="Foto 8" onclick="openLightbox(this.src)">
+    <img src="9.jpg" alt="Foto 9" onclick="openLightbox(this.src)">
+    <img src="10.jpg" alt="Foto 10" onclick="openLightbox(this.src)">
+    <img src="11.jpg" alt="Foto 11" onclick="openLightbox(this.src)">
+    <img src="12.jpg" alt="Foto 12" onclick="openLightbox(this.src)">
+    <img src="13.jpg" alt="Foto 13" onclick="openLightbox(this.src)">
+
+    <img src="15.jpg" alt="Foto 15" onclick="openLightbox(this.src)">
+    <img src="16.jpg" alt="Foto 16" onclick="openLightbox(this.src)">
+    <img src="17.jpg" alt="Foto 17" onclick="openLightbox(this.src)">
+    <img src="18.jpg" alt="Foto 18" onclick="openLightbox(this.src)">
+    <img src="19.jpg" alt="Foto 19" onclick="openLightbox(this.src)">
+    <img src="20.png" alt="Foto 20" onclick="openLightbox(this.src)">
+        <img src="1.png" alt="Foto 1" onclick="openLightbox(this.src)">
+            <img src="4.JPG" alt="Foto 4" onclick="openLightbox(this.src)">
+                <img src="5.JPG" alt="Foto 5" onclick="openLightbox(this.src)">
+                    <img src="7.JPG" alt="Foto 7" onclick="openLightbox(this.src)">
+                        <img src="14.jpg" alt="Foto 14" onclick="openLightbox(this.src)">
+  </div>
+
+ 
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="" alt="Imagen grande">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox(event) {
+      const lightbox = document.getElementById('lightbox');
+      if (event.target === lightbox)
+      {
+        lightbox.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
